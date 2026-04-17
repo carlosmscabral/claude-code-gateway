@@ -1,0 +1,20 @@
+{
+  "operationConfigs": [
+    {
+      "apiSource": "claude-code-gateway",
+      "llmOperations": [{"resource": "/", "methods": ["POST"], "model": "claude-sonnet-4-6"}],
+      "llmTokenQuota": {"limit": "5000000", "interval": "1", "timeUnit": "day"}
+    },
+    {
+      "apiSource": "claude-code-gateway",
+      "llmOperations": [{"resource": "/", "methods": ["POST"], "model": "claude-haiku-4-5"}],
+      "llmTokenQuota": {"limit": "5000000", "interval": "1", "timeUnit": "day"}
+    },
+    {
+      "apiSource": "claude-code-gateway",
+      "llmOperations": [{"resource": "/", "methods": ["POST"], "model": "claude-opus-4-7"}],
+      "llmTokenQuota": {"limit": "5000000", "interval": "1", "timeUnit": "day"}
+    }
+  ],
+  "operationConfigType": "proxy"
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+ Copyright 2024 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<AssignMessage continueOnError="false" enabled="true" name="AM-StaticModelList">
+  <DisplayName>AM-StaticModelList</DisplayName>
+  <Set>
+    <StatusCode>200</StatusCode>
+    <ReasonPhrase>OK</ReasonPhrase>
+    <Headers>
+      <Header name="Content-Type">application/json</Header>
+    </Headers>
+    <Payload contentType="application/json">
+{
+  "object": "list",
+  "data": [
+    {"id": "claude-opus-4-7", "type": "model", "display_name": "Claude Opus 4.7"},
+    {"id": "claude-sonnet-4-6", "type": "model", "display_name": "Claude Sonnet 4.6"},
+    {"id": "claude-haiku-4-5", "type": "model", "display_name": "Claude Haiku 4.5"}
+  ]
+}
+    </Payload>
+  </Set>
+  <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+  <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>
